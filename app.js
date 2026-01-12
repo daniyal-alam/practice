@@ -5,3 +5,5 @@ function pictureChange(onn) {
     document.getElementById("myImg").src = "hero1.jpg";
   }
 }
+
+var hello = 5;
