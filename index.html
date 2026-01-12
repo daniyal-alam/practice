@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="output">fibonacci function result</p>
+    <button onclick="myFunction(5, 10)">Mul</button><br />
+    <script>
+      function myFunction(a, b) {
+        document.write(a * b);
+      }
+      let x = myFunction(4, 3);
+      document.getElementById("demo").innerHTML = x; //12 output on webpage
+    </script>
+
+    <!-- Another example of function with events and script written in external JS file -->
+    <h4>2. picture change on event</h4>
+    <img src="hero.jpg" alt="cs" width="150px" height="150" id="myImg" />
+
+    <br />
+    <button onclick="pictureChange(0)">Default</button><br />
+    <button onclick="pictureChange(1)">Change</button>
+
+    <!-- Arrow function examples -->
+    <!-- You can skip the function keyword, the return keyword, and the curly brackets in arrow function 
+ -->
+    <!-- Example 1 -->
+    <script>
+      let result = (a, b) => a * b;
+
+      let resultOne = multiply(5, 6);
+      document.getElementById("demo").innerHTML = resultOne;
+    </script>
+
+    <!-- Example 2 -->
+    <script>
+      const fibonacci = (n) => {
+        let a = 0,
+          b = 1,
+          result = "";
+
+        for (let i = 0; i < n; i++) {
+          result += a + " ";
+          let next = a + b;
+          a = b;
+          b = next;
+        }
+
+        document.getElementById("output").innerHTML = result;
+      };
+
+      fibonacci(7);
+    </script>
+
+    <!-- String Concatenation: Using + to join strings
+    <script>
+      let name = "Daniyal";
+      let age = 22;
+
+      document.write("My name is " + name + " and my age is " + age);
+    </script> -->
+
+    <!-- Template Literal: Using backticks ` ` and ${}
+    <script>
+      let name = "Daniyal";
+      let age = 22;
+
+      document.write(`My name is ${name} and my age is ${age}`);
+    </script> -->
+
+    <!-- External JS connection  -->
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="g"></p>
+    <p id="l"></p>
+
+    <script>
+      let globalVar = "I am Global"; // Global variable
+
+      function showValues() {
+        let localVar = "I am Local"; // Local variable limited scope within function can't access outside function
+
+        document.getElementById("l").innerHTML = localVar; // works
+        document.getElementById("g").innerHTML = globalVar; // works
+      }
+
+      //   function invoke/calling
+      showValues();
+
+      // document.write(localVar); Error
+      // document.write(globalVar);
+    </script>
+  </body>
+</html>
